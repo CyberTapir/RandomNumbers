@@ -6,6 +6,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         initArray()
         Dim s As New Stopwatch
+        s.Reset()
         s.Start()
         method1()
         s.Stop()
@@ -30,13 +31,18 @@ Public Class Form1
             arrNums(i) = i
         Next i
     End Sub
-
     Private Sub method1()
         Dim temp As Integer
         Dim found As Boolean
-        For i = 2 To arrNums.Length
+        Dim maxNumber As Integer = 100000
+
+        For i = 1 To maxNumber
+            arrNums(i) = i
+        Next i
+
+        For i = 2 To maxNumber
             Do
-                temp = Int(Rnd() * 100000) + 1
+                temp = Int(Rnd() * maxNumber) + 1
                 found = False
                 For j = 1 To i - 1
                     If temp = arrNums(j) Then
@@ -44,7 +50,7 @@ Public Class Form1
                         Exit For
                     End If
                 Next j
-            Loop While found
+            Loop Until Not found
             arrNums(i) = temp
         Next i
     End Sub

@@ -28,18 +28,20 @@ Partial Class Form1
         ' ListBox1
         ' 
         ListBox1.FormattingEnabled = True
-        ListBox1.ItemHeight = 32
-        ListBox1.Location = New Point(59, 65)
+        ListBox1.ItemHeight = 15
+        ListBox1.Location = New Point(32, 30)
+        ListBox1.Margin = New Padding(2, 1, 2, 1)
         ListBox1.Name = "ListBox1"
-        ListBox1.Size = New Size(990, 580)
+        ListBox1.Size = New Size(489, 274)
         ListBox1.TabIndex = 0
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(13F, 32F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1121, 766)
+        ClientSize = New Size(554, 351)
         Controls.Add(ListBox1)
+        Margin = New Padding(2, 1, 2, 1)
         Name = "Form1"
         Text = "Form1"
         ResumeLayout(False)
